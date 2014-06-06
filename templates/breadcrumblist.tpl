@@ -20,28 +20,24 @@
  *}-->
 
 <!--{if $current_name != ''}-->
-<style type="text/css">
-  <!--{$arrData.css_data|h}-->
-</style>
 <!--{foreach from=$arrBreadcrumb item=i}-->
-<div class="breadcrumb">
-  <div itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-    <a href="<!--{$smarty.const.HTTP_URL}-->" itemprop="url">
-      <span itemprop="title">Home</span>
-    </a> &gt;
-  </div>
+<ol class="breadcrumb">
+  <li>
+    <a href="<!--{$smarty.const.HTTP_URL}-->">HOME</a>
+  </li>
   <!--{foreach from=$i item=content}-->
   <!--{if $content.category_name}-->
-  <div itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+  <li>
     <a href="<!--{$smarty.const.ROOT_URLPATH}-->products/list.php?category_id=<!--{$content.category_id|h}-->" itemprop="url">
       <span itemprop="title"><!--{$content.category_name|h}--></span>
-    </a> &gt;
-  </div>
+    </a>
+  </li>
   <!--{/if}-->
   <!--{/foreach}-->
-  <div itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+  <li>
     <span itemprop="title"><!--{$current_name|h}--></span>
-  </div>
-</div>
+  </li>
+</ol>
 <!--{/foreach}-->
+
 <!--{/if}-->

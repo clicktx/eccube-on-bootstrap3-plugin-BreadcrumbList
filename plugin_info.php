@@ -15,7 +15,7 @@ class plugin_info
     public static $CLASS_NAME        = "BreadcrumbList";
     public static $PLUGIN_VERSION    = "0.3";
     public static $COMPLIANT_VERSION = "2.12, 2.13";
-    public static $AUTHOR            = "Nobuhiko Kimoto";
+    public static $AUTHOR            = "clicktx";
     public static $DESCRIPTION       = "パンくずリストを生成する。テンプレート「EC-CUBE on BootStrap3」に最適化済。";
     public static $PLUGIN_SITE_URL   = "https://github.com/clicktx/eccube-on-bootstrap3-plugin-BreadcrumbList";
     public static $AUTHOR_SITE_URL   = "http://perl.no-tubo.net";

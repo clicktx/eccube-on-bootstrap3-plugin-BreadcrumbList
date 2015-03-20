@@ -74,7 +74,7 @@ class LC_Page_FrontParts_Bloc_BreadcrumbList extends LC_Page_FrontParts_Bloc {
             $this->arrBreadcrumb = array($arrBreadcrumb[0]);
             $objProduct = new SC_Product_Ex();
             $arrProduct = $objProduct->getDetail($product_id);
-            $this->current_name = $arrProduct['name'];
+            $this->current_name = ' ';
             break;
         case 'index.php':
             $this->current_name = '';

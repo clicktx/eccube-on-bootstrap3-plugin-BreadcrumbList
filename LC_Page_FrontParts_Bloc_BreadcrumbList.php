@@ -70,7 +70,8 @@ class LC_Page_FrontParts_Bloc_BreadcrumbList extends LC_Page_FrontParts_Bloc {
             break;
         case 'products/detail.php':
             $product_id = $_GET['product_id'];
-            $this->arrBreadcrumb = SC_Helper_DB_Ex::sfGetMultiCatTree($product_id);
+            $arrBreadcrumb = SC_Helper_DB_Ex::sfGetMultiCatTree($product_id);
+            $this->arrBreadcrumb = array($arrBreadcrumb[0]);
             $objProduct = new SC_Product_Ex();
             $arrProduct = $objProduct->getDetail($product_id);
             $this->current_name = $arrProduct['name'];
